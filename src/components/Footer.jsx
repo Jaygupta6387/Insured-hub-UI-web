@@ -7,7 +7,11 @@ export default function Footer() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <div className="brand footer-brand-row">
-            <span className="brand-mark" aria-hidden="true" />
+            <img
+              className="brand-logo"
+              src="/images/logo.jpeg"
+              alt="Insured Hub"
+            />
             <span className="brand-text">
               <strong>Insured Hub</strong>
               <small>{COMPANY.tagline}</small>

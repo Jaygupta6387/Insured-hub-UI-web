@@ -45,10 +45,10 @@ export default function Services() {
 
       <section className="section section-alt">
         <div className="container banner-frame">
-          <img
-            src="/images/banner-outdoor.webp"
-            alt="Insured Hub outdoor brand banner — We Secure Your Assets"
-          />
+            <img
+              src="/images/logo.jpeg"
+              alt="Insured Hub — We Secure Your Assets"
+            />
         </div>
       </section>
 

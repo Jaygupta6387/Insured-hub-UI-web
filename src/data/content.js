@@ -100,13 +100,6 @@ export const services = [
 
 export const sliderSlides = [
   {
-    image: '/images/banner-outdoor.webp',
-    objectPosition: 'center 35%',
-    eyebrow: 'Since 2003',
-    title: 'We Secure Your Assets',
-    subtitle: 'Health, life, motor, marine & more — guided by a trusted local adviser.',
-  },
-  {
     image: '/images/services-banner.webp',
     objectPosition: 'center center',
     eyebrow: 'Wide Range of Solutions',
@@ -119,6 +112,15 @@ export const sliderSlides = [
     eyebrow: 'Recognised Excellence',
     title: 'Trusted Industry Advisers',
     subtitle: 'Award-winning service and partnerships with leading insurers across India.',
+  },
+  {
+    image: '/images/logo.jpeg',
+    objectPosition: 'center center',
+    objectFit: 'contain',
+    variant: 'logo',
+    eyebrow: 'Since 2003',
+    title: 'We Secure Your Assets',
+    subtitle: 'Health, life, motor, marine & more — guided by a trusted local adviser.',
   },
 ]
 

@@ -4,6 +4,8 @@ import { COMPANY, sliderSlides, whatsappLink } from '../data/content'
 
 export default function HeroSlider() {
   const [index, setIndex] = useState(0)
+  const active = sliderSlides[index]
+  const isLogoSlide = active.variant === 'logo'
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -13,17 +15,23 @@ export default function HeroSlider() {
   }, [])
 
   return (
-    <section className="hero-slider" aria-label="Featured highlights">
+    <section
+      className={`hero-slider ${isLogoSlide ? 'is-logo-slide' : ''}`}
+      aria-label="Featured highlights"
+    >
       {sliderSlides.map((slide, i) => (
         <div
           key={slide.image}
-          className={`hero-slide ${i === index ? 'is-active' : ''}`}
+          className={`hero-slide ${i === index ? 'is-active' : ''} ${slide.variant === 'logo' ? 'is-logo' : ''}`}
           aria-hidden={i !== index}
         >
           <img
             src={slide.image}
             alt=""
-            style={{ objectPosition: slide.objectPosition }}
+            style={{
+              objectPosition: slide.objectPosition,
+              objectFit: slide.objectFit || 'cover',
+            }}
             className="hero-slide-img"
           />
           <div className="hero-overlay" />
@@ -31,10 +39,10 @@ export default function HeroSlider() {
       ))}
 
       <div className="container hero-content">
-        <p className="hero-eyebrow">{sliderSlides[index].eyebrow}</p>
+        <p className="hero-eyebrow">{active.eyebrow}</p>
         <h1 className="hero-brand">{COMPANY.name}</h1>
-        <p className="hero-title">{sliderSlides[index].title}</p>
-        <p className="hero-subtitle">{sliderSlides[index].subtitle}</p>
+        <p className="hero-title">{active.title}</p>
+        <p className="hero-subtitle">{active.subtitle}</p>
         <div className="hero-actions">
           <Link to="/contact" className="btn btn-primary">
             Contact Us

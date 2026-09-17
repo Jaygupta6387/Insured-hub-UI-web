@@ -32,7 +32,11 @@ export default function Navbar() {
     <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="container header-inner">
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
-          <span className="brand-mark" aria-hidden="true" />
+          <img
+            className="brand-logo"
+            src="/images/logo.jpeg"
+            alt="Insured Hub"
+          />
           <span className="brand-text">
             <strong>Insured Hub</strong>
             <small>Since {COMPANY.since}</small>
