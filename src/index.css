@@ -363,6 +363,41 @@ main {
   border-color: rgba(255, 255, 255, 0.45);
 }
 
+/* ── Promo slide (landscape banner) ─────────────────────────────── */
+.hero-slider.is-promo-slide {
+  min-height: min(95vh, 900px);
+}
+
+.hero-slide.is-promo {
+  background: #e8f1fb;
+}
+
+.hero-slide.is-promo .hero-slide-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  transform: none;
+}
+
+.hero-slide.is-promo.is-active .hero-slide-img {
+  animation: promoReveal 0.8s ease forwards;
+}
+
+@keyframes promoReveal {
+  from { opacity: 0; transform: scale(1.02); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.hero-slide.is-promo .hero-overlay {
+  /* Very light overlay — just enough for text readability on the left */
+  background:
+    linear-gradient(to right, rgba(7, 26, 51, 0.6) 0%, rgba(7, 26, 51, 0.2) 35%, transparent 60%),
+    linear-gradient(to top, rgba(7, 26, 51, 0.3) 0%, transparent 20%);
+}
+
 .footer-brand-row .brand-logo {
   background: #fff;
 }

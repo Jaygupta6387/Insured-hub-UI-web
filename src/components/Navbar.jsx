@@ -34,7 +34,7 @@ export default function Navbar() {
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
           <img
             className="brand-logo"
-            src="/images/logo.jpeg"
+            src="/images/new_logo.jpg"
             alt="Insured Hub"
           />
           <span className="brand-text">

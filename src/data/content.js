@@ -100,6 +100,15 @@ export const services = [
 
 export const sliderSlides = [
   {
+    image: '/images/slide-promo.webp',
+    objectPosition: 'center top',
+    objectFit: 'contain',
+    variant: 'promo',
+    eyebrow: 'Insured Hub IMF Pvt Ltd — Since 2003',
+    title: 'Insurance & Financial Services',
+    subtitle: 'Motor, Health, Life, Home, Marine, Mutual Funds & more — guided by Suryansh Gupta.',
+  },
+  {
     image: '/images/services-banner.webp',
     objectPosition: 'center center',
     eyebrow: 'Wide Range of Solutions',
@@ -114,7 +123,7 @@ export const sliderSlides = [
     subtitle: 'Award-winning service and partnerships with leading insurers across India.',
   },
   {
-    image: '/images/logo.jpeg',
+    image: '/images/new_logo.jpg',
     objectPosition: 'center center',
     objectFit: 'contain',
     variant: 'logo',

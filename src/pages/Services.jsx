@@ -46,7 +46,7 @@ export default function Services() {
       <section className="section section-alt">
         <div className="container banner-frame">
             <img
-              src="/images/logo.jpeg"
+              src="/images/new_logo.jpg"
               alt="Insured Hub — We Secure Your Assets"
             />
         </div>

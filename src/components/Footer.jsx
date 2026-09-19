@@ -9,7 +9,7 @@ export default function Footer() {
           <div className="brand footer-brand-row">
             <img
               className="brand-logo"
-              src="/images/logo.jpeg"
+              src="/images/new_logo.jpg"
               alt="Insured Hub"
             />
             <span className="brand-text">

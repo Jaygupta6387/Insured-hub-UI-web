@@ -6,6 +6,7 @@ export default function HeroSlider() {
   const [index, setIndex] = useState(0)
   const active = sliderSlides[index]
   const isLogoSlide = active.variant === 'logo'
+  const isPromoSlide = active.variant === 'promo'
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -16,22 +17,23 @@ export default function HeroSlider() {
 
   return (
     <section
-      className={`hero-slider ${isLogoSlide ? 'is-logo-slide' : ''}`}
+      className={`hero-slider ${isLogoSlide ? 'is-logo-slide' : ''} ${isPromoSlide ? 'is-promo-slide' : ''}`}
       aria-label="Featured highlights"
     >
       {sliderSlides.map((slide, i) => (
         <div
           key={slide.image}
-          className={`hero-slide ${i === index ? 'is-active' : ''} ${slide.variant === 'logo' ? 'is-logo' : ''}`}
+          className={`hero-slide ${i === index ? 'is-active' : ''} ${slide.variant === 'logo' ? 'is-logo' : ''} ${slide.variant === 'promo' ? 'is-promo' : ''}`}
           aria-hidden={i !== index}
         >
           <img
             src={slide.image}
             alt=""
-            style={{
-              objectPosition: slide.objectPosition,
-              objectFit: slide.objectFit || 'cover',
-            }}
+            style={
+              slide.variant === 'promo' || slide.variant === 'logo'
+                ? undefined
+                : { objectPosition: slide.objectPosition }
+            }
             className="hero-slide-img"
           />
           <div className="hero-overlay" />
