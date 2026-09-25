@@ -37,17 +37,19 @@ export default function Footer() {
           <h3>Contact</h3>
           <ul className="footer-links">
             <li>
+              <a href={telLink(COMPANY.primaryPhone)}>Call: {COMPANY.primaryPhone}</a>
+            </li>
+            <li>
               <a href={whatsappLink()}>WhatsApp: {COMPANY.whatsapp}</a>
             </li>
             <li>
               <a href={telLink(COMPANY.phone)}>Phone: {COMPANY.phone}</a>
             </li>
-            <li>
-              <a href={telLink(COMPANY.landline1)}>Landline: {COMPANY.landline1}</a>
-            </li>
-            <li>
-              <a href={telLink(COMPANY.landline2)}>Landline: {COMPANY.landline2}</a>
-            </li>
+            {COMPANY.landline1 && (
+              <li>
+                <a href={telLink(COMPANY.landline1)}>Landline: {COMPANY.landline1}</a>
+              </li>
+            )}
           </ul>
         </div>
       </div>

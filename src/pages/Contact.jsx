@@ -42,6 +42,10 @@ export default function Contact() {
             </p>
 
             <div className="contact-list">
+              <a className="contact-row" href={telLink(COMPANY.primaryPhone)}>
+                <span>Primary Call</span>
+                <strong>{COMPANY.primaryPhone}</strong>
+              </a>
               <a className="contact-row highlight" href={whatsappLink()} target="_blank" rel="noopener noreferrer">
                 <span>WhatsApp</span>
                 <strong>{COMPANY.whatsapp}</strong>
@@ -50,14 +54,12 @@ export default function Contact() {
                 <span>Mobile</span>
                 <strong>{COMPANY.phone}</strong>
               </a>
-              <a className="contact-row" href={telLink(COMPANY.landline1)}>
-                <span>Landline</span>
-                <strong>{COMPANY.landline1}</strong>
-              </a>
-              <a className="contact-row" href={telLink(COMPANY.landline2)}>
-                <span>Landline</span>
-                <strong>{COMPANY.landline2}</strong>
-              </a>
+              {COMPANY.landline1 && (
+                <a className="contact-row" href={telLink(COMPANY.landline1)}>
+                  <span>Landline</span>
+                  <strong>{COMPANY.landline1}</strong>
+                </a>
+              )}
             </div>
 
             <div className="hours-box">

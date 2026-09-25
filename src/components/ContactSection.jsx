@@ -14,6 +14,10 @@ export default function ContactSection({ compact = false }) {
         </div>
 
         <div className="contact-actions">
+          <a className="contact-pill" href={telLink(COMPANY.primaryPhone)}>
+            <span>Primary Call</span>
+            <strong>{COMPANY.primaryPhone}</strong>
+          </a>
           <a className="contact-pill contact-pill-wa" href={whatsappLink()} target="_blank" rel="noopener noreferrer">
             <span>WhatsApp</span>
             <strong>{COMPANY.whatsapp}</strong>
@@ -22,14 +26,12 @@ export default function ContactSection({ compact = false }) {
             <span>Call</span>
             <strong>{COMPANY.phone}</strong>
           </a>
-          <a className="contact-pill" href={telLink(COMPANY.landline1)}>
-            <span>Landline</span>
-            <strong>{COMPANY.landline1}</strong>
-          </a>
-          <a className="contact-pill" href={telLink(COMPANY.landline2)}>
-            <span>Landline</span>
-            <strong>{COMPANY.landline2}</strong>
-          </a>
+          {COMPANY.landline1 && (
+            <a className="contact-pill" href={telLink(COMPANY.landline1)}>
+              <span>Landline</span>
+              <strong>{COMPANY.landline1}</strong>
+            </a>
+          )}
         </div>
       </div>
     </section>

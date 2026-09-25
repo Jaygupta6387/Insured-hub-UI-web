@@ -1,6 +1,6 @@
 import { NavLink, Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
-import { COMPANY } from '../data/content'
+import { COMPANY, telLink } from '../data/content'
 
 const links = [
   { to: '/', label: 'Home', end: true },
@@ -67,8 +67,8 @@ export default function Navbar() {
               {link.label}
             </NavLink>
           ))}
-          <a className="btn btn-primary nav-cta" href={`tel:${COMPANY.whatsapp}`}>
-            Call {COMPANY.whatsapp}
+          <a className="btn btn-primary nav-cta" href={telLink(COMPANY.primaryPhone)}>
+            Call {COMPANY.primaryPhone}
           </a>
         </nav>
       </div>

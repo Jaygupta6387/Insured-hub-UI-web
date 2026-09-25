@@ -4,16 +4,19 @@ export const COMPANY = {
   since: '2003',
   advisor: 'Suryansh Gupta',
   whatsapp: '9818263535',
+  primaryPhone: '9818263535',
   phone: '9212043486',
   landline1: '011-45562535',
-  landline2: '011-45532535',
   email: 'info@insuredhub.in',
 }
 
 export const whatsappLink = (message = 'Hello Insured Hub, I would like to know more about insurance plans.') =>
   `https://wa.me/91${COMPANY.whatsapp}?text=${encodeURIComponent(message)}`
 
-export const telLink = (num) => `tel:${num.replace(/-/g, '')}`
+export const telLink = (num) => {
+  if (!num) return '#'
+  return `tel:${String(num).replace(/-/g, '')}`
+}
 
 export const services = [
   {
