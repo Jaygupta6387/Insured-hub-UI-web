@@ -103,7 +103,7 @@ export const services = [
 
 export const sliderSlides = [
   {
-    image: '/images/slide-promo.webp',
+    image: '/images/Insured%20Hub_%20Securing%20Futures%20Together.png',
     objectPosition: 'center top',
     objectFit: 'contain',
     variant: 'promo',
